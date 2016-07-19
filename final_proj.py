@@ -250,3 +250,16 @@ awards_salaries_combined = combine_dfs(awardsSharePlayers,salaries)
 
 print "Pearson's r for salary and points won"
 print(np.corrcoef(awards_salaries_combined['salary'],awards_salaries_combined['pointsWon']))
+
+
+
+
+
+
+college_playing = pd.read_csv('CollegePlaying.csv')
+# print(college_playing['schoolID'])
+college_count = college_playing['schoolID'].value_counts()
+
+
+college_count[:20].plot(kind='barh',rot =0)
+plt.show()
